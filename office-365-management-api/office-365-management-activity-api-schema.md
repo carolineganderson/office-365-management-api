@@ -370,6 +370,7 @@ This article provides details on the Common schema as well as service-specific s
 |385|P4AIAssessmentFabricScannerRecord|Events related to Purview for AI Assessment Fabric Scanner.|
 |386|PlannerGoal|Microsoft Planner goal events.|
 |387|PlannerGoalList|Microsoft Planner goal list events.|
+|[388](PurviewPostureAgent.md)|PurviewPostureAgent|Microsoft Purview Agent Platform posture monitoring events.|
 |414|VivaEngageSegment|Viva Engage segmentation events.|
 |422|VivaEngageEvents|Events related to Viva Engage hosted events.|
 |427|UniversalPrintManagement| Audit events related to Management events in Microsoft Universal Print.|
@@ -3146,6 +3147,32 @@ The DataScanClassification audit schema is designed to capture and log activitie
 |1|File classification completed successfully.|
 |2|File classification completed with error. One or more classifier evaluation failed.|
 |3|File classification failed.|
+
+## PurviewPostureAgent schema
+
+Microsoft Purview Posture Agent events (also known as dspmposture agent) returned in [audit log searches](/purview/audit-search) use this schema (and also the [Common schema](#common-schema)).
+
+### PurviewPostureAgent schema
+
+The PurviewPostureAgent audit schema is designed to capture and log activities related to the Purview Agent Platform posture monitoring.
+
+|Parameters|Type|Mandatory?|Description|
+|---|---|---|---|
+|DiscoveryId|Edm.String|No|Unique identifier for the discovery event.|
+|Scope|Collection(Self.[PostureAgentScope](#postureagentscope-complex-type))|No|Collection of scope information for the posture agent.|
+|OldLabel|Edm.String|No|The previous label value before the change.|
+|NewLabel|Edm.String|No|The new label value after the change.|
+|FileName|Edm.String|No|The name of the file associated with the posture agent event.|
+
+#### PostureAgentScope complex type
+
+|Parameters|Type|Mandatory?|Description|
+|---|---|---|---|
+|TenantID|Edm.Guid|Yes|The GUID of the tenant.|
+|PolicyID|Edm.Guid|Yes|The GUID of the policy.|
+|ScopeID|Edm.Guid|Yes|The GUID of the scope.|
+|AURemoved|Edm.Boolean|Yes|Indicates whether the AU was removed from the scope.|
+|CreationDateTime|Edm.DateTime|Yes|The date and time when the scope was created in UTC.|
 
 
 
