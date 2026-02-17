@@ -370,7 +370,7 @@ This article provides details on the Common schema as well as service-specific s
 |385|P4AIAssessmentFabricScannerRecord|Events related to Purview for AI Assessment Fabric Scanner.|
 |386|PlannerGoal|Microsoft Planner goal events.|
 |387|PlannerGoalList|Microsoft Planner goal list events.|
-|[388](PurviewPostureAgent.md)|PurviewPostureAgent|Microsoft Purview Agent Platform posture monitoring events.|
+|388|PurviewPostureAgent|Microsoft Purview Agent Platform posture monitoring events.|
 |414|VivaEngageSegment|Viva Engage segmentation events.|
 |422|VivaEngageEvents|Events related to Viva Engage hosted events.|
 |427|UniversalPrintManagement| Audit events related to Management events in Microsoft Universal Print.|
