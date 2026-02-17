@@ -373,7 +373,7 @@ This article provides details on the Common schema as well as service-specific s
 |414|VivaEngageSegment|Viva Engage segmentation events.|
 |422|VivaEngageEvents|Events related to Viva Engage hosted events.|
 |427|UniversalPrintManagement| Audit events related to Management events in Microsoft Universal Print.|
-|430|PurviewPostureAgent|Microsoft Purview Agent Platform posture monitoring events.|
+|430|PurviewPostureAgent|Microsoft Purview DSPM Posture Agent events.|
 
 ### Enum: User Type - Type: Edm.Int32
 
