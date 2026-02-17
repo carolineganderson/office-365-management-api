@@ -3150,29 +3150,26 @@ The DataScanClassification audit schema is designed to capture and log activitie
 
 ## PurviewPostureAgent schema
 
-Microsoft Purview Posture Agent events (also known as dspmposture agent) returned in [audit log searches](/purview/audit-search) use this schema (and also the [Common schema](#common-schema)).
+Microsoft Purview DSPM Posture Agent events, returned in [audit log searches](/purview/audit-search) use this schema (and also the [Common schema](#common-schema)).
 
 ### PurviewPostureAgent schema
 
-The PurviewPostureAgent audit schema is designed to capture and log activities related to the Purview Agent Platform posture monitoring.
+The PurviewPostureAgent audit schema is designed to capture and log activities related to the Purview DSPM Posture Agent.
 
 |Parameters|Type|Mandatory?|Description|
 |---|---|---|---|
 |DiscoveryId|Edm.String|No|Unique identifier for the discovery event.|
-|Scope|Collection(Self.[PostureAgentScope](#postureagentscope-complex-type))|No|Collection of scope information for the posture agent.|
+|Scope|Collection(Self.[PostureAgentSearchLocation](#postureagentsearchlocation-complex-type))|No|Collection of search location information for the posture agent.|
 |OldLabel|Edm.String|No|The previous label value before the change.|
 |NewLabel|Edm.String|No|The new label value after the change.|
 |FileName|Edm.String|No|The name of the file associated with the posture agent event.|
 
-#### PostureAgentScope complex type
+#### PostureAgentSearchLocation complex type
 
 |Parameters|Type|Mandatory?|Description|
 |---|---|---|---|
-|TenantID|Edm.Guid|Yes|The GUID of the tenant.|
-|PolicyID|Edm.Guid|Yes|The GUID of the policy.|
-|ScopeID|Edm.Guid|Yes|The GUID of the scope.|
-|AURemoved|Edm.Boolean|Yes|Indicates whether the AU was removed from the scope.|
-|CreationDateTime|Edm.DateTime|Yes|The date and time when the scope was created in UTC.|
+|Type|Edm.String|Yes|The type of the search location.|
+|Id|Edm.String|Yes|The identifier of the search location.|
 
 
 
