@@ -3158,7 +3158,7 @@ The PurviewPostureAgent audit schema is designed to capture and log activities r
 
 |Parameters|Type|Mandatory?|Description|
 |---|---|---|---|
-|DiscoveryId|Edm.String|No|Unique identifier for the discovery event.|
+|DiscoveryId|Edm.String|No|Unique identifier for the exploration event.|
 |Scope|Collection(Self.[PostureAgentSearchLocation](#postureagentsearchlocation-complex-type))|No|Collection of search location information for the posture agent.|
 |OldLabel|Edm.String|No|The previous label value before the change.|
 |NewLabel|Edm.String|No|The new label value after the change.|
@@ -3170,6 +3170,7 @@ The PurviewPostureAgent audit schema is designed to capture and log activities r
 |---|---|---|---|
 |Type|Edm.String|Yes|The type of the search location.|
 |Id|Edm.String|Yes|The identifier of the search location.|
+
 
 
 
